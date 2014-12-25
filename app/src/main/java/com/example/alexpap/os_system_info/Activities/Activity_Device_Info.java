@@ -45,7 +45,7 @@ public class Activity_Device_Info extends FragmentActivity{
         double megaAvailableIn = inAvailSize / 1048576;
         freeSpace.setText("Internal "+String.valueOf(megaAvailableSD)+"\n"+" SD "+String.valueOf(megaAvailableSD));
 
-        battery.setText(String.valueOf( Double.valueOf(BatteryManager.EXTRA_LEVEL) / Double.valueOf(BatteryManager.EXTRA_SCALE)));
+        battery.setText(BatteryManager.EXTRA_LEVEL+" "+BatteryManager.EXTRA_SCALE);
 
         uptime.setText(String.valueOf(android.os.SystemClock.uptimeMillis()));
 

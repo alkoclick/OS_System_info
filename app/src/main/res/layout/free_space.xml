@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Free Space Information"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:id="@+id/svSpaceMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="84dp"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:id="@+id/llSpaceMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginBottom="85dp">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Today is..."
+                android:layout_weight="0.35"
+                android:scrollbars = "vertical"/>
+
+            <TextView
+                android:id="@+id/tvInternalFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Free internal Space"
+                android:layout_weight="0.3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/tvSDFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Free space in SD"
+                android:layout_weight="0.35"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLastSnapshot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Placeholder text"
+            android:textAlignment="center"
+            android:layout_weight="0.5"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btTakeSnapshot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add current space information to database"
+            android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Processes"
+            android:layout_weight="0.5"
+            android:layout_marginRight="50dp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:text="Processes"
+            android:id="@+id/btProcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="50dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
